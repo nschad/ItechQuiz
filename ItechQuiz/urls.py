@@ -17,8 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.auth import views
+from quiz.forms import BootstrapAuthenticationForm
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name="index.html")),
     path('admin/', admin.site.urls),
-    path('quiz/', include('django.contrib.auth.urls'))
+    path('login/', views.LoginView.as_view(template_name='registration/login.html',
+                                           authentication_form=BootstrapAuthenticationForm), name='login'),
+    path('logout/', views.LogoutView.as_view(), name='login'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
