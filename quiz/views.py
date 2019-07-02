@@ -14,3 +14,9 @@ class PlayView(FormView):
         # It should return an HttpResponse.
         form.send_email()
         return super().form_valid(form)
+
+    def get(self, request, *args, **kwargs):
+        pass
+
+    def post(self, request, *args, **kwargs):
+        pass
