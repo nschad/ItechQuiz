@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.views import auth_login
 
-# Create your views here.
+
+def login(request):
+    au
