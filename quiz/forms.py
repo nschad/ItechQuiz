@@ -10,12 +10,26 @@ class BootstrapAuthenticationForm(AuthenticationForm):
         attrs={'id': 'inputPassword', 'type': 'password', 'placeholder': 'Password', 'class': 'form-control'}))
 
 
+class MySuperCustomCheckboxField(forms.CheckboxInput):
+
+    def __init__(self, question_name=""):
+        super().__init__()
+        self.question_name = question_name
+
+
 class PlayForm(forms.Form):
     def __init__(self, formdata: dict = None):
         super().__init__()
 
         if formdata is None:
-            raise ValueError("Passing no farmdata is kinda Shitty mate.")
+            raise ValueError("Passing no form data is kinda Shitty mate.")
 
-        for id, question in formdata:
-            self.fields[id] = forms.CharField(widget=forms.CheckboxInput(attrs={'type': 'checkbox', 'class': 'filled-in'}))
+        questions = formdata["options"]
+
+        for question in questions:
+            original_question_text = question
+            question_id = question.replace(" ", "_").strip()
+            self.fields[question_id] = forms.CharField(widget=MySuperCustomCheckboxField(
+                question_name=original_question_text))
+
+

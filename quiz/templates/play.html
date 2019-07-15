@@ -1,47 +1,21 @@
 {% extends 'base.html' %}
 
 {% block question %}
-            <h1 class="mt-2">Ich bin eine Frage?!?</h1>
+            <h1 class="mt-2">{{ question_name }}</h1>
 {% endblock %}
 
 {% block content %}
-<form action="#">
-    <p>
-      <label>
-        <input type="checkbox" />
-        <span>Red</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" checked="checked" />
-        <span>Yellow</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input id="indeterminate-checkbox" type="checkbox" />
-        <span>Indeterminate Style</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" checked="checked" disabled="disabled" />
-        <span>Green</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" disabled="disabled" />
-        <span>Brown</span>
-      </label>
-    </p>
-  </form>
+
+<form method="post" action="">
+    {% csrf_token %}
+{% for field in playform %}
+    <label>
+        <input type="checkbox" class="filled-in" name="{{ field.name }}">
+        <span>{{ field.label }}</span>
+    </label>
+    <br>
+{% endfor %}
+    <input type="submit" class="btn btn-default btn-xl" value="Submit">
+</form>
 
 {% endblock %}

@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is not a transport layer vulnerability?",
+      "options": [
+        "Mishandling of undefined, poorly defined",
+        "The Vulnerability that allows “fingerprinting” & other enumeration of host information",
+        "Overloading of transport-layer mechanisms",
+        "Unauthorized network access"
+      ],
+      "correct": "Unauthorized network access"
+    },
+    {
+      "question": "Which of the following is not session layer vulnerability?",
+      "options": [
+        "Mishandling of undefined, poorly defined",
+        "Spoofing and hijacking of data based on failed authentication attempts",
+        "Passing of session-credentials allowing intercept and unauthorized use",
+        "Weak or non-existent authentication mechanisms"
+      ],
+      "correct": "Mishandling of undefined, poorly defined"
+    }
+  ]
+}

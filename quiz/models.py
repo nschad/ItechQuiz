@@ -2,8 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 import datetime
 
-class Answer(models.Model):
-    answer = models.TextField(max_length=512)
+
+class Options(models.Model):
+    option = models.TextField(max_length=512)
     is_correct = models.BooleanField(default=False)
 
 
