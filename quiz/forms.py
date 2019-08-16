@@ -24,7 +24,7 @@ class PlayForm(forms.Form):
         if formdata is None:
             raise ValueError("Passing no form data is kinda Shitty mate.")
 
-        questions = formdata["options"]
+        questions = formdata["answers"]
 
         for question in questions:
             original_question_text = question

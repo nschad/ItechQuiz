@@ -5,7 +5,8 @@ from quiz.forms import PlayForm
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
-
+from quiz.models import Quiz
+import random
 
 @method_decorator(login_required(login_url='/login/'), name='dispatch')
 class PlayView(View):
@@ -14,14 +15,25 @@ class PlayView(View):
         super().__init__()
 
     def get(self, request, *args, **kwargs):
-        data = {
+        stockthingy = {
             'id': 1,
             'question_name': 'Bist du behindert?',
-            'options': ['Ja', 'Nein', 'Selber behindert!'],
+            'answers': ['Ja', 'Nein', 'Selber behindert!'],
             'correct_answer_id': 1
         }
-        form = PlayForm(formdata=data)
-        return render(request, 'play.html', {'question_name': 'Gandalf!', 'playform': form})
+        # Fetches Random Record.
+        quiz = Quiz.objects.all().prefetch_related('answers')
+        blub = random.choice(quiz)
+        from quiz.serializers import QuizSerializer
+
+        data = QuizSerializer.QuizSerializer(blub).data
+        print(data)
+        answers = blub.answers.all()
+        print(answers)
+        stockthingy['question_name'] = blub.question
+        stockthingy['answers'] = blub.answers
+        form = PlayForm(formdata=stockthingy)
+        return render(request, 'play.html', {'question_name': blub.question, 'playform': form})
 
     def post(self, request, *args, **kwargs):
         """

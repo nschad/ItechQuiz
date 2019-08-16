@@ -4,7 +4,7 @@ import json
 
 
 class Command(BaseCommand):
-    help = 'Closes the specified poll for voting'
+    help = 'Loads the a JSON Formatted File (List of Questions) into the database'
 
     def add_arguments(self, parser):
         parser.add_argument('path', nargs='+', type=str)
@@ -14,24 +14,29 @@ class Command(BaseCommand):
         Options.objects.all().delete()
 
         if not options['path']:
-            self.stderr.write(self.style.ERROR("WTF"))
+            self.stderr.write(self.style.ERROR("Please provide a valid path to a JSON Formatted Question File"))
 
         filepath = ''.join(options['path'])
         filepath = filepath.replace('\u202a', '')
+        print(filepath)
 
-        with open(filepath, "r") as sql_data:
-            data = json.loads(sql_data)
+        with open(filepath, "r", encoding="utf-8") as sql_data:
+            data = json.loads(sql_data.read())
             question_list = data['questions']
             data_options = []
-            data_questions = []
             for question in question_list:
+                tempQuestion = Quiz(question=question['question'])
+                tempQuestion.save()
                 for option in question['options']:
+                    index = question['correct']
                     temp = Options(
                         option=option,
-                        is_correct=question['correct'] == option
+                        is_correct=question['options'][index] == option
                     )
-                    data_options.append(temp)
+                    temp.save()
+                    tempQuestion.answers.add(temp)
 
+                tempQuestion.save()
 
+        self.stdout.write(self.style.SUCCESS('Successfully loaded all Elements'))
 
-        self.stdout.write(self.style.SUCCESS('Successfully closed poll "%s"' % poll_id))

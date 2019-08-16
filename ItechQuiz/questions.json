@@ -8,7 +8,7 @@
         "Overloading of transport-layer mechanisms",
         "Unauthorized network access"
       ],
-      "correct": "Unauthorized network access"
+      "correct": 3
     },
     {
       "question": "Which of the following is not session layer vulnerability?",
@@ -18,7 +18,7 @@
         "Passing of session-credentials allowing intercept and unauthorized use",
         "Weak or non-existent authentication mechanisms"
       ],
-      "correct": "Mishandling of undefined, poorly defined"
+      "correct": 0
     }
   ]
 }

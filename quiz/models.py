@@ -5,12 +5,12 @@ import datetime
 
 class Options(models.Model):
     option = models.TextField(max_length=512)
-    is_correct = models.BooleanField(default=False)
+    is_correct = models.BooleanField()
 
 
 class Quiz(models.Model):
     question = models.TextField(max_length=512)
-    answers = models.ForeignKey(Answer, on_delete=models.CASCADE)
+    answers = models.ManyToManyField(Options)
 
 
 class HighScore(models.Model):
