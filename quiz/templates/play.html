@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
 
 {% block question %}
-            <h1 class="mt-2">{{ question_name }}</h1>
+            <h1 class="mt-2">{{ data.question_name }}</h1>
 {% endblock %}
 
 {% block content %}
 
 <form method="post" action="">
     {% csrf_token %}
-{% for field in playform %}
+{% for answer in data.answers %}
     <label>
-        <input type="checkbox" class="filled-in" name="{{ field.name }}">
-        <span>{{ field.label }}</span>
+        <input type="checkbox" class="filled-in" name="selected_answers[]" value="{{ answer.answer_id }}">
+        <span>{{ answer.answer }}</span>
     </label>
     <br>
 {% endfor %}
     <input type="submit" class="btn btn-default btn-xl" value="Submit">
+    <input type="hidden" name="question_id" value="{{ data.question_key }}">
 </form>
 
 {% endblock %}
