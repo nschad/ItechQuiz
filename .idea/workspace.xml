@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b24c9b1-f466-4371-ba46-703f308d125a" name="Default Changelist" comment="Created Sample code for dynamically creating form fields">
-      <change afterPath="$PROJECT_DIR$/quiz/migrations/0004_auto_20190816_1606.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/migrations/0005_auto_20190820_0854.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/templates/css/error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/SessionManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/SessionManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,14 +50,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/serializers/QuizSerializer.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quiz/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="81">
+              <caret line="85" column="52" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ItechQuiz/questions.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -64,52 +89,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quiz/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quiz/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ItechQuiz/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/templates/play.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,8 +103,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -143,8 +126,6 @@
         <option value="$PROJECT_DIR$/quiz/templates/index.html" />
         <option value="$PROJECT_DIR$/quiz/templates/base.html" />
         <option value="$PROJECT_DIR$/quiz/templates/css/custom.css" />
-        <option value="$PROJECT_DIR$/ItechQuiz/urls.py" />
-        <option value="$PROJECT_DIR$/quiz/SessionManager.py" />
         <option value="$PROJECT_DIR$/quiz/LoadQuestions.py" />
         <option value="$PROJECT_DIR$/ItechQuiz/questions.json" />
         <option value="$PROJECT_DIR$/quiz/models.py" />
@@ -154,6 +135,11 @@
         <option value="$PROJECT_DIR$/quiz/serializers/QuizSerializer.py" />
         <option value="$PROJECT_DIR$/quiz/templates/play.html" />
         <option value="$PROJECT_DIR$/quiz/forms.py" />
+        <option value="$PROJECT_DIR$/ItechQuiz/urls.py" />
+        <option value="$PROJECT_DIR$/quiz/SessionManager.py" />
+        <option value="$PROJECT_DIR$/quiz/templates/css/error.css" />
+        <option value="$PROJECT_DIR$/quiz/templates/error.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cd685b23-3211-4ca3-b470-beba7123657d/console.sql" />
         <option value="$PROJECT_DIR$/quiz/views.py" />
       </list>
     </option>
@@ -187,12 +173,6 @@
               <item name="ItechQuiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="ItechQuiz" type="462c0819:PsiDirectoryNode" />
               <item name="quiz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ItechQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ItechQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="quiz" type="462c0819:PsiDirectoryNode" />
-              <item name="serializers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -273,6 +253,8 @@
       <workItem from="1563179468921" duration="8829000" />
       <workItem from="1565947415049" duration="4983000" />
       <workItem from="1565962470243" duration="7127000" />
+      <workItem from="1566283636764" duration="578000" />
+      <workItem from="1566285457295" duration="6578000" />
     </task>
     <task id="LOCAL-00001" summary="Ignore">
       <created>1562066715013</created>
@@ -299,13 +281,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34021000" />
+    <option name="totallyTimeSpent" value="41177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17590618" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49800798" visible="true" weight="0.1494638" />
+      <window_info id="Structure" order="1" sideWeight="0.50199205" side_tool="true" weight="0.1494638" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
@@ -314,7 +297,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="manage.py@ItechQuiz" order="7" visible="true" weight="0.3531961" />
+      <window_info active="true" anchor="bottom" id="manage.py@ItechQuiz" order="7" visible="true" weight="0.6732673" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32922733" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -326,7 +309,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32942432" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32908848" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,24 +373,7 @@
     <entry file="file://$PROJECT_DIR$/quiz/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/base.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/shortcuts.py" />
-    <entry file="file://$PROJECT_DIR$/quiz/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/base.py" />
     <entry file="file://C:/Python37/Lib/json/__init__.py">
@@ -439,15 +405,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/__init__.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cd685b23-3211-4ca3-b470-beba7123657d/console.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/29c1fe3f-8915-4251-8152-e650e6261372/console.sql" />
-    <entry file="file://$PROJECT_DIR$/ItechQuiz/questions.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quiz/management/commands/load_questions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -465,66 +423,10 @@
     <entry file="file://$PROJECT_DIR$/quiz/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_options" />
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz_answers" />
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz" />
-    <entry file="file://$PROJECT_DIR$/quiz/SessionManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ItechQuiz/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a92cc202-4e49-4e4b-b504-f7429f445cd0">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a92cc202-4e49-4e4b-b504-f7429f445cd0">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a92cc202-4e49-4e4b-b504-f7429f445cd0">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a92cc202-4e49-4e4b-b504-f7429f445cd0">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/serializers/QuizSerializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -535,26 +437,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/models.py">
+    <entry file="file://$PROJECT_DIR$/quiz/serializers/QuizSerializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="119">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quiz/templates/play.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quiz/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="136">
           <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
@@ -562,20 +457,155 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/play.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ItechQuiz/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="374">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/SessionManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/css/error.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding>
+            <element signature="e#262#268#0#HTML" expanded="true" />
+            <element signature="e#395#401#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_options">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="b134fafa-25bb-4fe4-8b98-baa5ea08a622">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz_answers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="b134fafa-25bb-4fe4-8b98-baa5ea08a622">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cd685b23-3211-4ca3-b470-beba7123657d/schema/main/table/quiz_quiz">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="b134fafa-25bb-4fe4-8b98-baa5ea08a622">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cd685b23-3211-4ca3-b470-beba7123657d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quiz/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ItechQuiz/questions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quiz/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="81">
+          <caret line="85" column="52" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
         </state>
       </provider>
     </entry>

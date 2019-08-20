@@ -1,5 +1,4 @@
-from quiz.models import *
-from django.http import HttpResponse
+from quiz.SessionManager import Session, SessionManager
 from django.views.generic import View
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
@@ -16,33 +15,44 @@ class PlayView(View):
         super().__init__()
 
     @staticmethod
-    def get_random_question() -> dict:
-        data = {}
+    def get_random_questions() -> []:
+        questions = []
+
         if Quiz.objects.all().count() == 0:
             return None
 
-        quiz = Quiz.objects.all().prefetch_related('answers')
-        question = random.choice(quiz)
+        quiz = Quiz.objects.all().prefetch_related('answers').order_by('?')
 
-        question_data = QuizSerializer.QuizSerializer(question).data
-        answers = question_data['answers']
+        for question in quiz:
+            data = {}
+            question_data = QuizSerializer.QuizSerializer(question).data
+            answers = question_data['answers']
 
-        data['question_name'] = question_data['question']
+            data['question_name'] = question_data['question']
 
-        answers = Options.objects.filter(id__in=answers)
-        data['answers'] = []
-        for answer in answers:
-            data['answers'].append({'answer': answer.option, 'answer_id': answer.id})
+            answers = Options.objects.filter(id__in=answers)
+            data['answers'] = []
+            for answer in answers:
+                data['answers'].append({'answer': answer.option, 'answer_id': answer.id})
 
-        data['question_key'] = question.id
+            data['question_key'] = question.id
 
-        return data
+            questions.append(data)
+
+        return questions
 
     def get(self, request, *args, **kwargs):
-        data = self.get_random_question()
+        smngr = SessionManager()
+        session = smngr.get_session_by_user(request.user)
 
-        # POW!
-        return render(request, 'play.html', {'data': data})
+        if session is None:
+            # We have not created a valid Session for the User yet :(
+            # Lets do that
+            data = self.get_random_questions()
+            session = Session(request.user, data)
+            smngr.add_session(session)
+
+        return render(request, 'play.html', {'data': session.get_current_question()})
 
     def post(self, request, *args, **kwargs):
         """
@@ -55,5 +65,28 @@ class PlayView(View):
         data: dict = request.POST.dict()
         data.pop('csrfmiddlewaretoken', None)
         answer_ids = request.POST.getlist('selected_answers[]')
+        answer_ids = ''.join(answer_ids)
+        question_id = request.POST.get('question_id')
+        session = SessionManager().get_session_by_user(request.user)
+
+        if (len(answer_ids) == 0 or answer_ids is None) or (question_id is None):
+            print("ERROR!")
+            return redirect('play')
+
+        if session is None:
+            print("FATAL ERROR! WTF IS GOING ON WTF WTF WTF WTF")
+            return render(request, 'error.html')
+
+        correct_answers_query = Quiz.objects.prefetch_related('answers').filter(id=question_id, answers__is_correct__exact=True)
+        lewert = correct_answers_query.values('id', 'question', 'answers__id', 'answers__option', 'answers__is_correct')
+        correct_answer_id = lewert[0]['answers__id']
+        print("CORRECT ANSWER: {}".format(correct_answer_id))
+        print("RECEIVED ANSWER: {}".format(answer_ids))
+
+        if int(correct_answer_id) == int(answer_ids):
+            print("WOOOW YOU ARE SOO GOOD ITS LIKE YOU ARE NOT SHIT")
+            session = SessionManager().get_session_by_user(request.user)
+            session.update_score(10)
+            session.advance()
 
         return redirect('play')
