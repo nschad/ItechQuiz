@@ -20,7 +20,7 @@ from django.conf import settings
 from django.contrib.auth import views
 from quiz.forms import BootstrapAuthenticationForm
 from django.views.generic import TemplateView
-from quiz.views import PlayView
+from quiz.views import PlayView, FinishView
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html")),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('login/', views.LoginView.as_view(template_name='registration/login.html',
                                            authentication_form=BootstrapAuthenticationForm), name='login'),
     path('logout/', views.LogoutView.as_view(), name='login'),
-    path('play/', PlayView.as_view(), name='play')
+    path('play/', PlayView.as_view(), name='play'),
+    path('finish/', FinishView.as_view(), name='finish')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

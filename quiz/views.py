@@ -4,8 +4,21 @@ from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from quiz.models import Quiz, Options
-import random
+from django.http import HttpResponse
 from quiz.serializers import QuizSerializer
+
+
+@method_decorator(login_required(login_url='/login/'), name='dispatch')
+class FinishView(View):
+
+    def __init__(self):
+        super().__init__()
+
+    def get(self, request, *args, **kwargs):
+        # Implement PlayAgain Logic
+        # View Scores
+        # Save Score to Database
+        return HttpResponse("YOU ARE DONE! CG!")
 
 
 @method_decorator(login_required(login_url='/login/'), name='dispatch')
@@ -52,7 +65,11 @@ class PlayView(View):
             session = Session(request.user, data)
             smngr.add_session(session)
 
-        return render(request, 'play.html', {'data': session.get_current_question()})
+        question_data = session.get_current_question()
+        if question_data is None:
+            return redirect('finish')
+        else:
+            return render(request, 'play.html', {'data': question_data})
 
     def post(self, request, *args, **kwargs):
         """

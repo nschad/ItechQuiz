@@ -20,7 +20,7 @@ class Session:
         self.score = 0
         self.username: User = username
         self.current_question_idx = 0
-        self.questions: [] = questions
+        self.questions: [dict] = questions
 
     def update_score(self, score):
         self.score += score
@@ -28,11 +28,11 @@ class Session:
     def get_questions(self) -> []:
         return self.questions
 
-    def get_current_question(self) -> Optional[str]:
-        if self.current_question_idx > len(self.questions):
+    def get_current_question(self) -> Optional[dict]:
+        try:
+            return self.questions.pop()
+        except IndexError:
             return None
-        else:
-            return self.questions[self.current_question_idx]
 
     def advance(self):
         self.current_question_idx += 1
