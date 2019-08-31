@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b24c9b1-f466-4371-ba46-703f308d125a" name="Default Changelist" comment="Created amazing CSS Selector Override.&#10;Fixxed multiple Answer Selection bla bla bvla">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItechQuiz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ItechQuiz/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/SessionManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/SessionManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/play.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="2b24c9b1-f466-4371-ba46-703f308d125a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +66,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/quiz/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -152,7 +143,7 @@
       <workItem from="1566384084029" duration="1701000" />
       <workItem from="1566464904956" duration="1647000" />
       <workItem from="1567067537995" duration="9037000" />
-      <workItem from="1567252663339" duration="9963000" />
+      <workItem from="1567252663339" duration="10091000" />
     </task>
     <task id="LOCAL-00001" summary="Ignore">
       <created>1562066715013</created>
@@ -189,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567256768458</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished this shit">
+      <created>1567262743120</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567262743120</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +210,8 @@
     <MESSAGE value="Created Sample code for dynamically creating form fields" />
     <MESSAGE value="Did Stuff" />
     <MESSAGE value="Created amazing CSS Selector Override.&#10;Fixxed multiple Answer Selection bla bla bvla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created amazing CSS Selector Override.&#10;Fixxed multiple Answer Selection bla bla bvla" />
+    <MESSAGE value="Finished this shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished this shit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
