@@ -1,10 +1,10 @@
-from quiz.SessionManager import Session, SessionManager
-from django.views.generic import View
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
-from django.contrib.auth.decorators import login_required
+from django.views.generic import View
+
+from quiz.SessionManager import Session, SessionManager
 from quiz.models import Quiz, Options, HighScore
-from django.http import HttpResponse
 from quiz.serializers import QuizSerializer
 
 
@@ -17,7 +17,7 @@ class FinishView(View):
     def get(self, request, *args, **kwargs):
         user = request.user
         session = SessionManager().get_session_by_user(user)
-        if session:
+        if session and session.is_done():
             score = HighScore(score=session.score, player=user)
             score.save()
             SessionManager().close_session_by_user(user)
@@ -64,13 +64,12 @@ class PlayView(View):
         session = smngr.get_session_by_user(request.user)
 
         if session is None:
-            # We have not created a valid Session for the User yet :(
-            # Lets do that
             data = self.get_random_questions()
             session = Session(request.user, data)
             smngr.add_session(session)
 
         question_data = session.get_next_question()
+
         if question_data is None:
             return redirect('finish')
         else:
@@ -87,28 +86,31 @@ class PlayView(View):
         data: dict = request.POST.dict()
         data.pop('csrfmiddlewaretoken', None)
         answer_ids = request.POST.getlist('selected_answers[]')
-        answer_ids = ''.join(answer_ids)
         question_id = request.POST.get('question_id')
         session = SessionManager().get_session_by_user(request.user)
+
+        answer_ids = list(map(int, answer_ids))
 
         if (len(answer_ids) == 0 or answer_ids is None) or (question_id is None):
             print("You have not selected anything man!")
             return redirect('play')
 
         if session is None:
-            print("FATAL ERROR! WTF IS GOING ON WTF WTF WTF WTF")
             return render(request, 'error.html')
 
         # Pop the Question!
         session.pop_current_question(int(question_id))
 
-        correct_answers_query = Quiz.objects.prefetch_related('answers').filter(id=question_id, answers__is_correct__exact=True)
+        correct_answers_query = Quiz.objects.prefetch_related('answers').filter(
+            id=question_id,
+            answers__is_correct__exact=True
+        )
         lewert = correct_answers_query.values('id', 'question', 'answers__id', 'answers__option', 'answers__is_correct')
-        correct_answer_id = lewert[0]['answers__id']
-        print("CORRECT ANSWER: {}".format(correct_answer_id))
-        print("RECEIVED ANSWER: {}".format(answer_ids))
+        correct_answer_ids = []
+        for correct_answer in lewert:
+            correct_answer_ids.append(correct_answer['answers__id'])
 
-        if int(correct_answer_id) == int(answer_ids):
+        if correct_answer_ids == answer_ids:
             session = SessionManager().get_session_by_user(request.user)
             session.update_score(10)
             session.advance()

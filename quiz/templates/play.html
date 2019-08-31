@@ -9,7 +9,7 @@
 <form method="post" action="">
     {% csrf_token %}
 {% for answer in data.answers %}
-    <label>
+    <label class="checkbox-container invalid">
         <input type="checkbox" class="filled-in" name="selected_answers[]" value="{{ answer.answer_id }}">
         <span>{{ answer.answer }}</span>
     </label>

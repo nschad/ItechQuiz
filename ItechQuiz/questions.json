@@ -87,6 +87,18 @@
         "Mirroring"
       ],
       "correct": 3
+    },
+    {
+      "question": "Wie TILT ist eigentlich Niclas damit er jetzht die Scheiße machen darf?",
+      "options": [
+        "FULL TILT",
+        "MEDIUM TILT",
+        "NO TILT"
+      ],
+      "correct": [
+        0,
+        1
+      ]
     }
   ]
 }

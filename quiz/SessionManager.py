@@ -1,4 +1,5 @@
-from typing import Optional, Any
+from typing import Optional
+
 from django.contrib.auth.models import User
 
 
@@ -28,15 +29,19 @@ class Session:
     def get_questions(self) -> []:
         return self.questions
 
+    def is_done(self) -> bool:
+        return len(self.questions) == 0
+
     def get_next_question(self) -> Optional[dict]:
         try:
             return self.questions[0]
         except IndexError:
             return None
+        except TypeError:
+            return None
 
     def pop_current_question(self, id: int):
         for question in self.questions:
-            print(type(question['question_key']))
             if question['question_key'] == id:
                 self.questions.remove(question)
 

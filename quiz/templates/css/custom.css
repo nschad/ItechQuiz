@@ -4,3 +4,16 @@
     border-radius: 10px;
     width:50%;
 }
+
+:root {
+    --error: #f44336;
+}
+
+.checkbox-container.invalid [type="checkbox"].filled-in:checked + span:not(.lever):after {
+    border-color: var(--error);
+    background-color: var(--error);
+}
+
+.checkbox-container.invalid {
+    color: var(--error);
+}
