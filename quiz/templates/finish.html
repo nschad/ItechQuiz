@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block question %}
+    <h1 class="mt-2">{{ data.question_name }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    <table class="table-striped">
+        <thead>
+        <tr>
+            <th>User</th>
+            <th>Score</th>
+            <th>Submitted at</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for highscore in data %}
+        <tr>
+            <td>{{ highscore.player }}</td>
+            <td>{{ highscore.score }}</td>
+            <td>{{ highscore.archived_at }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{% url 'play' %}"><button type="button" class="btn btn-default btn-xl">Play Again!</button></a>
+
+{% endblock %}

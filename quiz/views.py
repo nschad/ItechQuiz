@@ -3,7 +3,7 @@ from django.views.generic import View
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
-from quiz.models import Quiz, Options
+from quiz.models import Quiz, Options, HighScore
 from django.http import HttpResponse
 from quiz.serializers import QuizSerializer
 
@@ -15,10 +15,15 @@ class FinishView(View):
         super().__init__()
 
     def get(self, request, *args, **kwargs):
-        # Implement PlayAgain Logic
-        # View Scores
-        # Save Score to Database
-        return HttpResponse("YOU ARE DONE! CG!")
+        user = request.user
+        session = SessionManager().get_session_by_user(user)
+        if session:
+            score = HighScore(score=session.score, player=user)
+            score.save()
+            SessionManager().close_session_by_user(user)
+
+        highscore_data = HighScore.objects.all().order_by('-score')
+        return render(request, 'finish.html', {'data': highscore_data})
 
 
 @method_decorator(login_required(login_url='/login/'), name='dispatch')
@@ -65,7 +70,7 @@ class PlayView(View):
             session = Session(request.user, data)
             smngr.add_session(session)
 
-        question_data = session.get_current_question()
+        question_data = session.get_next_question()
         if question_data is None:
             return redirect('finish')
         else:
@@ -87,12 +92,15 @@ class PlayView(View):
         session = SessionManager().get_session_by_user(request.user)
 
         if (len(answer_ids) == 0 or answer_ids is None) or (question_id is None):
-            print("ERROR!")
+            print("You have not selected anything man!")
             return redirect('play')
 
         if session is None:
             print("FATAL ERROR! WTF IS GOING ON WTF WTF WTF WTF")
             return render(request, 'error.html')
+
+        # Pop the Question!
+        session.pop_current_question(int(question_id))
 
         correct_answers_query = Quiz.objects.prefetch_related('answers').filter(id=question_id, answers__is_correct__exact=True)
         lewert = correct_answers_query.values('id', 'question', 'answers__id', 'answers__option', 'answers__is_correct')
@@ -101,7 +109,6 @@ class PlayView(View):
         print("RECEIVED ANSWER: {}".format(answer_ids))
 
         if int(correct_answer_id) == int(answer_ids):
-            print("WOOOW YOU ARE SOO GOOD ITS LIKE YOU ARE NOT SHIT")
             session = SessionManager().get_session_by_user(request.user)
             session.update_score(10)
             session.advance()

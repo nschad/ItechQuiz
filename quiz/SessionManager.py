@@ -28,11 +28,17 @@ class Session:
     def get_questions(self) -> []:
         return self.questions
 
-    def get_current_question(self) -> Optional[dict]:
+    def get_next_question(self) -> Optional[dict]:
         try:
-            return self.questions.pop()
+            return self.questions[0]
         except IndexError:
             return None
+
+    def pop_current_question(self, id: int):
+        for question in self.questions:
+            print(type(question['question_key']))
+            if question['question_key'] == id:
+                self.questions.remove(question)
 
     def advance(self):
         self.current_question_idx += 1
@@ -54,5 +60,5 @@ class SessionManager(Singleton):
 
     def close_session_by_user(self, username: User):
         for session in self.sessions:
-            if session.user == username:
+            if session.username == username:
                 self.sessions.remove(session)

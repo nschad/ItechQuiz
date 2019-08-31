@@ -19,6 +19,74 @@
         "Weak or non-existent authentication mechanisms"
       ],
       "correct": 0
+    },
+    {
+      "question": "Wofür steht VPN?",
+      "options": [
+        "Variable Public Network",
+        "Virtual Private Tunnel",
+        "Virtual Public Tunnel",
+        "Vietnam Protocal Network"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was bedeutet die Abkürzung SSH?",
+      "options": [
+        "Secure Securer Shell",
+        "Secure Shell Hub",
+        "Secure Shell"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Welche SSH Keys gibt es?",
+      "options": [
+        "Open and Secure",
+        "Private and Public",
+        "Personal and Common"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wieviele Festplatten werden mindestends für ein RAID 1 System gebraucht?",
+      "options": [
+        "1",
+        "2",
+        "5",
+        "3"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was ist eine Maßnahme der Datensicherung",
+      "options": [
+        "RAID",
+        "VPN",
+        "Verschlüsselung"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was ist eine Technik zum Sichern von Passwörter in Datenbanken?",
+      "options": [
+        "Sugaring",
+        "Seasoning",
+        "Peppering",
+        "Salting"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Welches Verfahren wird bei RAID 0 verwendet?",
+      "options": [
+        "Flipping",
+        "Radonming",
+        "Copying",
+        "Striping",
+        "Mirroring"
+      ],
+      "correct": 3
     }
   ]
 }
