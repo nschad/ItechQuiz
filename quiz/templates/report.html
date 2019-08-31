@@ -1,22 +1,28 @@
 {% extends 'base.html' %}
 
 {% block question %}
-    <h1 class="mt-2">{{ data.question_name }}</h1>
+    <h3 class="mt-2">{{ data.question }}</h3>
 {% endblock %}
 
 {% block content %}
     <hr class="mt-0 mb-4">
-    <form method="post" action="">
-        {% csrf_token %}
-        {% for answer in data.answers %}
-            <label>
-                <input type="checkbox" class="filled-in" name="selected_answers[]" value="{{ answer.answer_id }}">
-                <span>{{ answer.answer }}</span>
-            </label>
-            <br>
-        {% endfor %}
-        <input type="submit" class="btn btn-default btn-xl" value="Submit">
-        <input type="hidden" name="question_id" value="{{ data.question_key }}">
-    </form>
+    {% for option in data.options %}
+        <label
+                {% if option.pk in data.answered_ids and option.pk not in data.correct_answers or option.pk not in data.answered_ids and option.pk in data.correct_answers %}
+                    class="checkbox-container invalid"
+                {% elif option.pk in data.answered_ids %}
+                    class="checkbox-container correct"
+                {% else %}
+                    class="checkbox-container"
+                {% endif %}>
+            <input type="checkbox" class="filled-in" name="selected_answers[]"
+                   {% if option.pk in data.answered_ids %}checked="checked"{% endif %}>
+            <span>{{ option.option }}</span>
+        </label>
+        <br>
+    {% endfor %}
+    <a href="{% url 'play' %}">
+        <button class="btn btn-default" style="float: right">Continue</button>
+    </a>
 
 {% endblock %}

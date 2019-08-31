@@ -22,6 +22,7 @@ class Session:
         self.username: User = username
         self.current_question_idx = 0
         self.questions: [dict] = questions
+        self.answered = {}
 
     def update_score(self, score):
         self.score += score
@@ -31,6 +32,9 @@ class Session:
 
     def is_done(self) -> bool:
         return len(self.questions) == 0
+
+    def set_answered(self, question_id: str, options_ids: []):
+        self.answered = {'question_id': question_id, 'options_ids': options_ids}
 
     def get_next_question(self) -> Optional[dict]:
         try:

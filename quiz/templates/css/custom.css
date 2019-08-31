@@ -7,6 +7,7 @@
 
 :root {
     --error: #f44336;
+    --correct: #26a69a;
 }
 
 .checkbox-container.invalid [type="checkbox"].filled-in:checked + span:not(.lever):after {
@@ -16,4 +17,12 @@
 
 .checkbox-container.invalid {
     color: var(--error);
+}
+
+.checkbox-container.correct {
+    color: var(--correct);
+}
+
+.checkbox-container {
+    pointer-events: none;
 }

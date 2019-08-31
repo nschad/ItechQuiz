@@ -17,6 +17,7 @@ class FinishView(View):
     def get(self, request, *args, **kwargs):
         user = request.user
         session = SessionManager().get_session_by_user(user)
+
         if session and session.is_done():
             score = HighScore(score=session.score, player=user)
             score.save()
@@ -24,6 +25,23 @@ class FinishView(View):
 
         highscore_data = HighScore.objects.all().order_by('-score')
         return render(request, 'finish.html', {'data': highscore_data})
+
+
+@method_decorator(login_required(login_url='/login/'), name='dispatch')
+class ReportView(View):
+
+    def __init__(self):
+        super().__init__()
+
+    def get(self, request, *args, **kwargs):
+        data = request.session['answered_data']
+        question_id = data['question_id']
+        print(data)
+        session = SessionManager().get_session_by_user(request.user)
+        session.pop_current_question(question_id)
+        options = Options.objects.filter(quiz=question_id)
+        data['options'] = list(options)
+        return render(request, 'report.html', {'data': data})
 
 
 @method_decorator(login_required(login_url='/login/'), name='dispatch')
@@ -98,9 +116,6 @@ class PlayView(View):
         if session is None:
             return render(request, 'error.html')
 
-        # Pop the Question!
-        session.pop_current_question(int(question_id))
-
         correct_answers_query = Quiz.objects.prefetch_related('answers').filter(
             id=question_id,
             answers__is_correct__exact=True
@@ -115,4 +130,8 @@ class PlayView(View):
             session.update_score(10)
             session.advance()
 
-        return redirect('play')
+        request.session['answered_data'] = {'question': Quiz.objects.get(pk=int(question_id)).question,
+                                            'question_id': int(question_id), 'correct_answers': correct_answer_ids,
+                                            'answered_ids': answer_ids}
+
+        return redirect('report')
