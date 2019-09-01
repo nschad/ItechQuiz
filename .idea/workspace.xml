@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b24c9b1-f466-4371-ba46-703f308d125a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItechQuiz/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ItechQuiz/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +74,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -153,7 +149,9 @@
       <workItem from="1566464904956" duration="1647000" />
       <workItem from="1567067537995" duration="9037000" />
       <workItem from="1567252663339" duration="10091000" />
-      <workItem from="1567263615593" duration="1974000" />
+      <workItem from="1567263615593" duration="2730000" />
+      <workItem from="1567293210715" duration="614000" />
+      <workItem from="1567343298688" duration="1452000" />
     </task>
     <task id="LOCAL-00001" summary="Ignore">
       <created>1562066715013</created>
@@ -204,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567263794661</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Started Dockering Django">
+      <created>1567265660773</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567265660773</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +236,8 @@
     <MESSAGE value="Created amazing CSS Selector Override.&#10;Fixxed multiple Answer Selection bla bla bvla" />
     <MESSAGE value="Finished this shit" />
     <MESSAGE value="Added requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt" />
+    <MESSAGE value="Started Dockering Django" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started Dockering Django" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
