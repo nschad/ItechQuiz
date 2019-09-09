@@ -36,4 +36,7 @@ urlpatterns = [
                   path('finish/', FinishView.as_view(), name='finish'),
                   path('report/', ReportView.as_view(), name='report'),
                   path(r'^favicon\.ico$', favicon_view)
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

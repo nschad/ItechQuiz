@@ -4,8 +4,7 @@
     <list default="true" id="2b24c9b1-f466-4371-ba46-703f308d125a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItechQuiz/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ItechQuiz/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItechQuiz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ItechQuiz/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +58,11 @@
       <list>
         <option value="ShuzZzle &lt;niclas.schad@gmail.com&gt;" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
@@ -151,7 +155,8 @@
       <workItem from="1567252663339" duration="10091000" />
       <workItem from="1567263615593" duration="2730000" />
       <workItem from="1567293210715" duration="614000" />
-      <workItem from="1567343298688" duration="1452000" />
+      <workItem from="1567343298688" duration="1916000" />
+      <workItem from="1568044685054" duration="1017000" />
     </task>
     <task id="LOCAL-00001" summary="Ignore">
       <created>1562066715013</created>
@@ -209,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567265660773</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Started Dockering Django">
+      <created>1567345982334</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567345982334</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
