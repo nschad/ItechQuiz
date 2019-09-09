@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2b24c9b1-f466-4371-ba46-703f308d125a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItechQuiz/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ItechQuiz/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItechQuiz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ItechQuiz/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +154,7 @@
       <workItem from="1567263615593" duration="2730000" />
       <workItem from="1567293210715" duration="614000" />
       <workItem from="1567343298688" duration="1916000" />
-      <workItem from="1568044685054" duration="1017000" />
+      <workItem from="1568044685054" duration="1723000" />
     </task>
     <task id="LOCAL-00001" summary="Ignore">
       <created>1562066715013</created>
