@@ -7,11 +7,10 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN pip install --upgrade pip
-RUN pip install -r --no-cache-dir requirements.txt
-
 COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
-
 COPY . /usr/src/app/
+
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

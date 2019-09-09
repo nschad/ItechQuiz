@@ -24,8 +24,6 @@ from django.views.generic.base import RedirectView
 from quiz.forms import BootstrapAuthenticationForm
 from quiz.views import PlayView, FinishView, ReportView
 
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
-
 urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html")),
     path('admin/', admin.site.urls),
@@ -34,8 +32,7 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('play/', PlayView.as_view(), name='play'),
                   path('finish/', FinishView.as_view(), name='finish'),
-                  path('report/', ReportView.as_view(), name='report'),
-                  path(r'^favicon\.ico$', favicon_view)
+                  path('report/', ReportView.as_view(), name='report')
 ]
 
 if settings.DEBUG:

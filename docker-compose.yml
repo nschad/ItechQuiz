@@ -1,4 +1,4 @@
-version: '1.0'
+version: '3.3'
 
 services:
   web:
@@ -7,17 +7,17 @@ services:
       dockerfile: Dockerfile
     command: gunicorn ItechQuiz.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - static_volume:/usr/src/app/staticfiles
+      - static_volume:/usr/src/app/static
     expose:
       - 8000
     env_file: .env
   nginx:
     build: ./nginx
     volumes:
-      - static_volume:/usr/src/app/staticfiles
+      - static_volume:/usr/src/app/static
     ports:
-      - 80:80
+      - 1337:80
     depends_on:
       - web
 volumes:
-  static_volume
+  static_volume:
