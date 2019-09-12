@@ -2,10 +2,27 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
 from django.views.generic import View
+from django.contrib.auth import authenticate, login
 
 from quiz.SessionManager import Session, SessionManager
 from quiz.models import Quiz, Options, HighScore
 from quiz.serializers import QuizSerializer
+from quiz.forms import BootsrapRegisterForm
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = BootsrapRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('play')
+        else:
+            form = BootsrapRegisterForm()
+        return render(request, 'register.html', {'form': form})
 
 
 @method_decorator(login_required(login_url='/login/'), name='dispatch')

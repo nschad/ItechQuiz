@@ -22,7 +22,7 @@ from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
 
 from quiz.forms import BootstrapAuthenticationForm
-from quiz.views import PlayView, FinishView, ReportView
+from quiz.views import PlayView, FinishView, ReportView, signup
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html")),
@@ -31,8 +31,9 @@ urlpatterns = [
                                            authentication_form=BootstrapAuthenticationForm), name='login'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('play/', PlayView.as_view(), name='play'),
-                  path('finish/', FinishView.as_view(), name='finish'),
-                  path('report/', ReportView.as_view(), name='report')
+    path('finish/', FinishView.as_view(), name='finish'),
+    path('report/', ReportView.as_view(), name='report'),
+    path('register/', signup, name='register')
 ]
 
 if settings.DEBUG:
