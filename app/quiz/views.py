@@ -20,8 +20,8 @@ def signup(request):
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('play')
-        else:
-            form = BootsrapRegisterForm()
+    else:
+        form = BootsrapRegisterForm()
         return render(request, 'registration/register.html', {'form': form})
 
 
