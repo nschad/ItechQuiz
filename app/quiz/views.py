@@ -74,7 +74,7 @@ class PlayView(View):
         if Quiz.objects.all().count() == 0:
             return None
 
-        quiz = Quiz.objects.all().prefetch_related('answers').order_by('?')
+        quiz = Quiz.objects.all().prefetch_related('answers').order_by('?')[:15]
 
         for question in quiz:
             data = {}
