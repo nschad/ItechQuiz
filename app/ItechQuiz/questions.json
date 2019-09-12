@@ -446,7 +446,7 @@
 		},
 		{
 			"question": "Wie lautet die genaue Definition von Big Data?",
-			"option": [
+			"options": [
 				"Es gibt keine genaue Definition",
 				"Zustrom von Daten aus neuen Technologien",
 				"Große Mengen an Daten",
@@ -456,7 +456,7 @@
 		},
 		{
 			"question": "Welche hauptsächliche Zielsetzung haben Unternehmen mit einer Big Data-Analyse?",
-			"option": [
+			"options": [
 				"Mitarbeiterzufriedenheit",
 				"Befriedigung der persönlichen Neugier",
 				"Wirtschaftlicher Nutzen",
@@ -466,7 +466,7 @@
 		},
 		{
 			"question": "In welche Bereiche wird mit Big Data-Analysen am meisten investiert?",
-			"option": [
+			"options": [
 				"Kundenorientierter Einsatz",
 				"Produktionsoptimierung",
 				"Logistik",
@@ -476,7 +476,7 @@
 		},
 		{
 			"question": "Welche Daten sind für Big Data geeignet?",
-			"option": [
+			"options": [
 				"Standortdaten (GPS)",
 				"Daten sozialer Netzwerke",
 				"Gefälschte/Manipulierte Daten",
@@ -490,7 +490,7 @@
 		},
 		{
 			"question": "Welche ist keine der Big Data Dimensionen?",
-			"option": [
+			"options": [
 				"Variety",
 				"Volume",
 				"Viscosity",
@@ -500,7 +500,7 @@
 		},
 		{
 			"question": "Welche Architektur gibt es nicht?",
-			"option": [
+			"options": [
 				"Cloud Computing",
 				"Steam Computing",
 				"Fog Computing",
@@ -513,7 +513,7 @@
 		},
 		{
 			"question": "Wofür stehen die 5 “V” in der BigData?",
-			"option": [
+			"options": [
 				"Volume, Veracious, Variety, Veracity, und Valiant",
 				"Volume, Variabel, Variety, Veracity, und Value",
 				"Volume, Velocity, Variety, Veracity, und Value",
@@ -523,7 +523,7 @@
 		},
 		{
 			"question": "Was ist hadoop?",
-			"option": [
+			"options": [
 				"Ein Tier",
 				"Eine Big Data Dimension",
 				"Eine Programmiersprache",
@@ -533,7 +533,7 @@
 		},
 		{
 			"question": "Was sind Beispiele von einer NoSQL Datenbank?",
-			"option": [
+			"options": [
 				"Ceph",
 				"MongoDB",
 				"Apache Cassandra",
@@ -546,7 +546,7 @@
 		},
 		{
 			"question": "Welches Unternehm verwendet Hadoop?",
-			"option": [
+			"options": [
 				"Google",
 				"Facebook",
 				"IBM",
@@ -560,7 +560,7 @@
 		},
 		{
 			"question": "Was haben Sensoren mit Big Data zu tun?",
-			"option": [
+			"options": [
 				"Sie schaffen riesige Mengen an Daten",
 				"Sensoren können nur mit statischen Daten genutzt werden",
 				"Nichts",
@@ -570,7 +570,7 @@
 		},
 		{
 			"question": "Welche Aussage beschreibt diskrete Variablen?",
-			"option": [
+			"options": [
 				"Sie sind zählbar mit fortlaufender Wertmenge",
 				"Diskrete Variablen sind qualitativ und werden in genau 5 Kategorien eingeteilt",
 				"Sie sind zählbar mit endlicher Wertmenge",
@@ -580,7 +580,7 @@
 		},
 		{
 			"question": "Warum werden Daten anonymisiert?",
-			"option": [
+			"options": [
 				"Um Datenmengen zu verkleinern",
 				"Um Datenmengen zu vergrößern",
 				"Um persönliche Informationen zu löschen",
@@ -590,7 +590,7 @@
 		},
 		{
 			"question": "Bei welcher Menge spricht man von Big Data?",
-			"option": [
+			"options": [
 				"100TB",
 				"42KB",
 				"500GB",
@@ -603,7 +603,7 @@
 		},
 		{
 			"question": "Welcher Ablauf ist geeignet für \"Data at Rest\"?",
-			"option": [
+			"options": [
 				"store > analyze > notify > act",
 				"notify > store > act > analyze",
 				"analyze > notify > act > store",
