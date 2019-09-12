@@ -22,7 +22,7 @@ def signup(request):
             return redirect('play')
         else:
             form = BootsrapRegisterForm()
-        return render(request, 'register.html', {'form': form})
+        return render(request, 'registration/register.html', {'form': form})
 
 
 @method_decorator(login_required(login_url='/login/'), name='dispatch')
