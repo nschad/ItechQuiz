@@ -1,104 +1,615 @@
 {
-  "questions": [
-    {
-      "question": "Which of the following is not a transport layer vulnerability?",
-      "options": [
-        "Mishandling of undefined, poorly defined",
-        "The Vulnerability that allows “fingerprinting” & other enumeration of host information",
-        "Overloading of transport-layer mechanisms",
-        "Unauthorized network access"
-      ],
-      "correct": 3
-    },
-    {
-      "question": "Which of the following is not session layer vulnerability?",
-      "options": [
-        "Mishandling of undefined, poorly defined",
-        "Spoofing and hijacking of data based on failed authentication attempts",
-        "Passing of session-credentials allowing intercept and unauthorized use",
-        "Weak or non-existent authentication mechanisms"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Wofür steht VPN?",
-      "options": [
-        "Variable Public Network",
-        "Virtual Private Tunnel",
-        "Virtual Public Tunnel",
-        "Vietnam Protocal Network"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Was bedeutet die Abkürzung SSH?",
-      "options": [
-        "Secure Securer Shell",
-        "Secure Shell Hub",
-        "Secure Shell"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "Welche SSH Keys gibt es?",
-      "options": [
-        "Open and Secure",
-        "Private and Public",
-        "Personal and Common"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Wieviele Festplatten werden mindestends für ein RAID 1 System gebraucht?",
-      "options": [
-        "1",
-        "2",
-        "5",
-        "3"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Was ist eine Maßnahme der Datensicherung",
-      "options": [
-        "RAID",
-        "VPN",
-        "Verschlüsselung"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Was ist eine Technik zum Sichern von Passwörter in Datenbanken?",
-      "options": [
-        "Sugaring",
-        "Seasoning",
-        "Peppering",
-        "Salting"
-      ],
-      "correct": 3
-    },
-    {
-      "question": "Welches Verfahren wird bei RAID 0 verwendet?",
-      "options": [
-        "Flipping",
-        "Radonming",
-        "Copying",
-        "Striping",
-        "Mirroring"
-      ],
-      "correct": 3
-    },
-    {
-      "question": "Wie TILT ist eigentlich Niclas damit er jetzht die Scheiße machen darf?",
-      "options": [
-        "FULL TILT",
-        "MEDIUM TILT",
-        "NO TILT"
-      ],
-      "correct": [
-        0,
-        1
-      ]
-    }
-  ]
+	"questions": [
+		{
+			"question": "Was ist der Unterschied zwischen normalen Ipv6 Adressen und link-localen Ipv6 Adressen?",
+			"options": [
+				"Der Interface-Identifier",
+				"Der Port",
+				"Die Länge",
+				"Der Netzwerk-Präfix"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Was gibt es bei Ipv6 nicht?",
+			"options": [
+				"Broadcast",
+				"Multicast",
+				"Anycast",
+				"Geocast"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Ipv6 gehört zur OSI Schicht Nummer?",
+			"options": [
+				"1",
+				"2",
+				"3",
+				"4"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Die richtige Schreibweise für eine Ipv6 URL ist?",
+			"options": [
+				"http://2001:0db8:85a3:08d3::0370:7344/",
+				"http://[2001:0db8:85a3:08d3::0370:7344]/",
+				"http://ipv6:2001:0db8:85a3:08d3::0370:7344/",
+				"http://{2001:0db8:85a3:08d3::0370:7344}/"
+			],
+			"correct": 1
+		},
+		{
+			"question": "Ipv6 Adressen haben eine Länge von?",
+			"options": [
+				"64Bit",
+				"128Byte",
+				"256Bit",
+				"128Bit"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Wofür steht IPv6",
+			"options": [
+				"Internet Protocol Version 6",
+				"Internet Protection Version 6",
+				"Internet Pool Version 6",
+				"Internet Path Version 6"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Wieviele Bits hat eine IPv6-Adresse",
+			"options": [
+				"32",
+				"64",
+				"128",
+				"256"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Ist es sinnvoll auf einem PC IPv4 zu deaktivieren und komplett auf IPv6 umzusteigen",
+			"options": [
+				"Ja, weil dann mehr Adressen zur verfügung stehen ",
+				"Ja, weil IPv6 schneller ist",
+				"Nein, weil man nicht an den Einstellungen rumfummeln sollte",
+				"Nein, weil alte Geräte teilweise kein IPv6 unterstützen"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Wofür steht die Adresse ::1",
+			"options": [
+				"Loopback-Adresse",
+				"Broadcast-Adresse",
+				"Fallback-Adresse",
+				"Nicht spezifiziert"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Wie lautet die gekürzte Adresse von FE80:CD00:0000:0CDE:1257:0000:211E:729C",
+			"options": [
+				"FE80:CD00:0:CDE:1257:0:211E:729C",
+				"FE80:CD::CDE:1257::211E:729C",
+				"FE80:CD:0:CDE:1257:0:211E:729C",
+				"FE80:CD00:CDE:1257:211E:729C"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Welcher Teil der Adresse ist die Hostadresse von FFFF:0000:0000:0000:0000:0000:c0a8:1/16",
+			"options": [
+				"FFFF",
+				"0000:0000:0000:0000:0000",
+				"c0a8:1"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Wie viele Adressbereiche gibt es mit IPv6?",
+			"options": [
+				"2 hoch 128",
+				"128 hoch 2",
+				"2 hoch 64",
+				"340282366920938463463374607431768211456"
+			],
+			"correct": [
+				0,
+				3
+			]
+		},
+		{
+			"question": "Welche Netzwerkklassen gibt es mit IPv6?",
+			"options": [
+				"A,B,C",
+				"A,B,C,D,E,F",
+				"Keine"
+			],
+			"correct": [
+				2
+			]
+		},
+		{
+			"question": "Wie heißt die erste OSI-Schicht?",
+			"options": [
+				"Anwendungsschicht",
+				"Bitübertragungsschicht",
+				"Sicherungsschicht",
+				"Sitzungsschicht"
+			],
+			"correct": 1
+		},
+		{
+			"question": "Wie heißt die zweite OSI-Schicht?",
+			"options": [
+				"Anwendungsschicht",
+				"Bitübertragungsschicht",
+				"Sicherungsschicht",
+				"Darstellungsschicht"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Wie heißt die dritte OSI-Schicht?",
+			"options": [
+				"Vermittlungs-/Paketsschicht",
+				"Sitzungsschicht",
+				"Sicherungsschicht",
+				"Darstellungsschicht"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Die wievielte Schicht ist die Transportschicht im OSI-Modell?",
+			"options": [
+				"7",
+				"1",
+				"4"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Wie heißt die fünfte OSI-Schicht?",
+			"options": [
+				"Sitzungsschicht",
+				"Darstellungsschicht",
+				"Anwendungsschicht"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Die wievielte Schicht ist die Darstellungsschicht im OSI-Modell?",
+			"options": [
+				"7",
+				"6",
+				"5",
+				"4"
+			],
+			"correct": 1
+		},
+		{
+			"question": "Wie heißt die siebte OSI-Schicht?",
+			"options": [
+				"Es gibt keine 7te Schicht",
+				"Bitübertragungsschicht",
+				"Sitzungsschicht",
+				"Anwendungsschicht"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Wie heißt die achte OSI-Schicht?",
+			"options": [
+				"Anwendungsschicht",
+				"Sitzungsschicht",
+				"Es gibt keine 8te Schicht",
+				"Darstellungsschicht"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Welche Schicht wird nicht zu den anwendungsorientieren Schichten gezählt?",
+			"options": [
+				"Anwendungsschicht",
+				"Darstellungsschicht",
+				"Sitzungsschicht",
+				"Sicherungsschicht"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Welche Schichten werden zu den transportorientiert Schichten gezählt?",
+			"options": [
+				"Transportschicht",
+				"Vermittlungs-/Paketsschicht",
+				"Sicherungsschicht",
+				"Bitübertragungsschicht"
+			],
+			"correct": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"question": "Welcher der folgenden Merksätze für das OSI-Modell sind korrekt?",
+			"options": [
+				"Alle Priester saufen Vodka nach der Predicht.",
+				"Bitte werfe niemals Salami Pizza Stücke weg.",
+				"Alle deutchschen Studenten trinken verschiedene Sorten Bier."
+			],
+			"correct": 2
+		},
+		{
+			"question": "Nenne ein Protokoll der Transportschicht?",
+			"options": [
+				"TCP",
+				"SMTP",
+				"HTTPS",
+				"IP"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Nenne zwei Protokolle der Anwendungsschicht?",
+			"options": [
+				"FTP",
+				"UPD",
+				"ICMP",
+				"LDAP"
+			],
+			"correct": [
+				0,
+				3
+			]
+		},
+		{
+			"question": "Welche Einheiten werden in der Vermittlungs-/Paketsschicht übertragen?",
+			"options": [
+				"IP-Adressen",
+				"MAC-Adressen",
+				"UPS-Einheiten",
+				"Pakte"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Welche Einheiten werden in der Sicherungsschicht übertragen?",
+			"options": [
+				"DHL-Pakte",
+				"Rahmen",
+				"Symbole",
+				"Bits"
+			],
+			"correct": 1
+		},
+		{
+			"question": "Welche Personengruppe ist beschränkt geschäftsfähig?Welche Personengruppe ist beschränkt geschäftsfähig?",
+			"options": [
+				"Personen bis zur Vollendung des 7. Lebensjahres",
+				"Personen vor dem 7. Lebensjahr mit Ihrem Taschengeld",
+				"Personen, die zwar das 7. Lebensjahr, aber noch nicht das 18. Lebensjahr vollendet haben",
+				"Personen bis zur Vollendung des 21. Lebensjahres"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Was bedeutet der Begriff 'Tarifautonomie'?",
+			"options": [
+				"Streit zwischen Arbeitgeber und Gewerkschaften",
+				"Der Tarifvertrag wird ohne Mitwirken des Staates abgeschlossen",
+				"Ein Tarifvertrag wird mit Mitwirken des Staates abgeschlossen",
+				"Der Tarifvertrag ist allgemein gültig"
+			],
+			"correct": 1
+		},
+		{
+			"question": "Wer bezahlt die Beiträge zur gesetzlichen Krankenversicherung?",
+			"options": [
+				"Arbeitgeber und Arbeitnehmer",
+				"Arbeitgeber",
+				"Arbeitnehmer",
+				"Krankenkasse"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Zwischen welchen Verbänden finden Tarifverhandlungen statt?",
+			"options": [
+				"Zwischen dem Arbeitsamt und den Gewerkschaften",
+				"Zwischen Arbeitgeberverband und der Berufsgenossenschaft",
+				"Zwischen Arbeitgeberverband und Gewerkschaft",
+				"Zwischen Industrie- und Handelskammer und Gewerkschaften"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Welches ist keine gesetzliche Sozialversicherung?",
+			"options": [
+				"Unfallversicherung",
+				"Krankenversicherung",
+				"Rentenversicherung",
+				"Haftpflichtversicherung"
+			],
+			"correct": 3
+		},
+		{
+			"question": "What is the broadcast address of the network 172.19.137.192/27?",
+			"options": [
+				"172.19.139.20",
+				"172.19.139.223",
+				"172.19.139.1",
+				"172.19.139.255"
+			],
+			"correct": 1
+		},
+		{
+			"question": "What is the maximum number of valid subnets and usable hosts per subnet that you can get from the network 192.168.88.0 255.255.255.240",
+			"options": [
+				"Subnets: 16, Hosts per subnet: 14",
+				"Subnets: 14, Hosts per subnet: 16",
+				"Subnets: 8, Hosts per subnet: 7",
+				"Subnets: 64, Hosts per subnet 32"
+			],
+			"correct": 0
+		},
+		{
+			"question": "What is the first valid host on the network 172.27.232.0/21",
+			"options": [
+				"172.27.233.1",
+				"172.27.232.1",
+				"172.27.232.255",
+				"172.27.232.0"
+			],
+			"correct": 1
+		},
+		{
+			"question": "What is the valid host range for the network, in which 10.230.151.230 255.255.248.0 is a part of?",
+			"options": [
+				"First Host: 10.230.144.1, Last Host: 10.230.151.230",
+				"First Host: 10.230.144.0, Last Host: 10.230.151.255",
+				"First Host: 10.230.145.1, Last Host: 10.230.151.254",
+				"First Host: 10.230.144.1, Last Host: 10.230.151.254"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Which subnet mask should be used when needing at least 16 hosts in a network with 5 subnets",
+			"options": [
+				"255.255.255.192",
+				"255.255.255.224",
+				"255.255.255.240",
+				"255.255.255.248"
+			],
+			"correct": 1
+		},
+		{
+			"question": "What is the valid host address for the network 172.16.16.17.0/22",
+			"options": [
+				"255.255.255.252 172.16.17.1",
+				"255.255.240.0 172.16.0.1",
+				"255.255.254.0 172.16.20.1",
+				"255.255.252.0 172.16.18.255"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Which addresses are valid host addreses in the subnet 192.168.73.46/27",
+			"options": [
+				"192.168.73.37",
+				"192.168.73.13",
+				"192.168.73.62",
+				"192.168.73.55"
+			],
+			"correct": [
+				0,
+				3
+			]
+		},
+		{
+			"question": "What is the subnet of the host address of 172.16.222.0/22",
+			"options": [
+				"172.16.208.0",
+				"172.16.120.0",
+				"172.16.220.0",
+				"172.16.223.0"
+			],
+			"correct": 2
+		},
+		{
+			"question": "You are using the subnetmask 255.255.255.224, what IP addresess can be assigned to a host in this subnet?",
+			"options": [
+				"91.12.175.91",
+				"167.134.16.53",
+				"None of them.",
+				"192.168.16.130"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Which of the following are IPv6 features",
+			"options": [
+				"Anycast",
+				"Podcast",
+				"Broadcast",
+				"Multicast"
+			],
+			"correct": [
+				0,
+				3
+			]
+		},
+		{
+			"question": "Wie lautet die genaue Definition von Big Data?",
+			"option": [
+				"Es gibt keine genaue Definition",
+				"Zustrom von Daten aus neuen Technologien",
+				"Große Mengen an Daten",
+				"Daten aus sozialen Netzwerken"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Welche hauptsächliche Zielsetzung haben Unternehmen mit einer Big Data-Analyse?",
+			"option": [
+				"Mitarbeiterzufriedenheit",
+				"Befriedigung der persönlichen Neugier",
+				"Wirtschaftlicher Nutzen",
+				"Einstellung auf möglichen Konkurrenten"
+			],
+			"correct": 2
+		},
+		{
+			"question": "In welche Bereiche wird mit Big Data-Analysen am meisten investiert?",
+			"option": [
+				"Kundenorientierter Einsatz",
+				"Produktionsoptimierung",
+				"Logistik",
+				"Produktentwicklung"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Welche Daten sind für Big Data geeignet?",
+			"option": [
+				"Standortdaten (GPS)",
+				"Daten sozialer Netzwerke",
+				"Gefälschte/Manipulierte Daten",
+				"Daten von Smartphones (Mobilfunk/Apps)"
+			],
+			"correct": [
+				0,
+				1,
+				3
+			]
+		},
+		{
+			"question": "Welche ist keine der Big Data Dimensionen?",
+			"option": [
+				"Variety",
+				"Volume",
+				"Viscosity",
+				"Velocity"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Welche Architektur gibt es nicht?",
+			"option": [
+				"Cloud Computing",
+				"Steam Computing",
+				"Fog Computing",
+				"Smoke Computing"
+			],
+			"correct": [
+				1,
+				3
+			]
+		},
+		{
+			"question": "Wofür stehen die 5 “V” in der BigData?",
+			"option": [
+				"Volume, Veracious, Variety, Veracity, und Valiant",
+				"Volume, Variabel, Variety, Veracity, und Value",
+				"Volume, Velocity, Variety, Veracity, und Value",
+				"Volume, Villainous, Variety, Veracity, und Valiant"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Was ist hadoop?",
+			"option": [
+				"Ein Tier",
+				"Eine Big Data Dimension",
+				"Eine Programmiersprache",
+				"Ein Framework"
+			],
+			"correct": 3
+		},
+		{
+			"question": "Was sind Beispiele von einer NoSQL Datenbank?",
+			"option": [
+				"Ceph",
+				"MongoDB",
+				"Apache Cassandra",
+				"GlusterFS"
+			],
+			"correct": [
+				1,
+				2
+			]
+		},
+		{
+			"question": "Welches Unternehm verwendet Hadoop?",
+			"option": [
+				"Google",
+				"Facebook",
+				"IBM",
+				"Ching Chong Restaurant"
+			],
+			"correct": [
+				0,
+				1,
+				2
+			]
+		},
+		{
+			"question": "Was haben Sensoren mit Big Data zu tun?",
+			"option": [
+				"Sie schaffen riesige Mengen an Daten",
+				"Sensoren können nur mit statischen Daten genutzt werden",
+				"Nichts",
+				"Sie produzieren strukturierte Daten"
+			],
+			"correct": 0
+		},
+		{
+			"question": "Welche Aussage beschreibt diskrete Variablen?",
+			"option": [
+				"Sie sind zählbar mit fortlaufender Wertmenge",
+				"Diskrete Variablen sind qualitativ und werden in genau 5 Kategorien eingeteilt",
+				"Sie sind zählbar mit endlicher Wertmenge",
+				"Variable von Typ Boolean"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Warum werden Daten anonymisiert?",
+			"option": [
+				"Um Datenmengen zu verkleinern",
+				"Um Datenmengen zu vergrößern",
+				"Um persönliche Informationen zu löschen",
+				"Um die Datenmengen nicht zu manipulieren"
+			],
+			"correct": 2
+		},
+		{
+			"question": "Bei welcher Menge spricht man von Big Data?",
+			"option": [
+				"100TB",
+				"42KB",
+				"500GB",
+				"1000TB"
+			],
+			"correct": [
+				0,
+				3
+			]
+		},
+		{
+			"question": "Welcher Ablauf ist geeignet für \"Data at Rest\"?",
+			"option": [
+				"store > analyze > notify > act",
+				"notify > store > act > analyze",
+				"analyze > notify > act > store",
+				"act > analyze > store > notify"
+			],
+			"correct": 0
+		}
+	]
 }
