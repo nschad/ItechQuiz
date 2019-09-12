@@ -2,6 +2,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import password_validation
+from django.utils.translation import gettext, gettext_lazy as _
+
 
 
 class BootstrapAuthenticationForm(AuthenticationForm):
